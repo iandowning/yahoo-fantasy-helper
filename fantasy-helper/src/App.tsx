@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-      <h1>Fantasy Helper</h1>
+      <div className="header"><h1>Fantasy Helper</h1></div>
       <div className="card">
         <input id="input" type="text" onChange={(e) => setId(e.target.value)} value={id}  />
         <button onClick={() => handleLeague(id)}>
