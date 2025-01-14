@@ -34,7 +34,6 @@ function App() {
       </div>
       <p>
         Sample League ID: 1144529717383651328
-
       </p>
     </>
   )
