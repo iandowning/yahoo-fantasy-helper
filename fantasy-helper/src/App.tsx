@@ -3,7 +3,7 @@ import {getLeague, getRosters} from './api/sleeperTest'
 import './App.css'
 
 function App() {
-  const [id, setId] = useState('');
+  const [id, setId] = useState('1144529717383651328');
   const [league, setLeague] = useState(null);
   const [rosters, setRosters] = useState(null);
 
@@ -15,11 +15,16 @@ function App() {
     getRosters(id).then((response) => setRosters(response));
   }
 
+  const clearAll = () => {
+    setLeague(null);
+    setRosters(null);
+  }
+
   return (
     <>
       <h1>Fantasy Helper</h1>
       <div className="card">
-        <input id="input" type="text" onChange={(e) => setId(e.target.value)} />
+        <input id="input" type="text" onChange={(e) => setId(e.target.value)} value={id}  />
         <button onClick={() => handleLeague(id)}>
           Get League
         </button>
@@ -28,10 +33,8 @@ function App() {
         </button>
         <div>{league? JSON.stringify(league) : ''}</div>
         <div>{rosters? JSON.stringify(rosters) : ''}</div>
-        <p>
-          
-        </p>
       </div>
+      <button onClick={clearAll}>Clear</button>
       <p>
         Sample League ID: 1144529717383651328
       </p>
