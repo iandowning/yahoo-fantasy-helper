@@ -1,0 +1,1 @@
+This is a basic React project with plans to connect to both the Sleeper API (Fantasy Sports), and OpenAI API for analysis of league data and possible recommendations, recaps, matchup grades, etc.
